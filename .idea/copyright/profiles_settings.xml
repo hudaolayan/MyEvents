@@ -1,0 +1,14 @@
+<component name="CopyrightManager">
+  <settings default="huda">
+    <module2copyright>
+      <element module="Project Source Files" copyright="huda" />
+      <element module="Tests" copyright="huda" />
+    </module2copyright>
+    <LanguageOptions name="JAVA">
+      <option name="fileLocation" value="3" />
+    </LanguageOptions>
+    <LanguageOptions name="Kotlin">
+      <option name="fileTypeOverride" value="3" />
+    </LanguageOptions>
+  </settings>
+</component>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021
+  ~ project: MyEvents
+  ~ by: hudashafoot
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="6dp"
+    android:viewportWidth="48"
+    android:viewportHeight="6">
+    <group>
+        <clip-path
+            android:pathData="M3,0h42a3,3 0,0 1,3 3h0a3,3 0,0 1,-3 3L3,6a3,3 0,0 1,-3 -3h0A3,3 0,0 1,3 0Z"
+            android:fillType="evenOdd"/>
+        <group>
+            <clip-path
+                android:pathData="M-164,565L211,565L211,-12L-164,-12Z"/>
+            <path
+                android:pathData="M-5,-5h58v16L-5,11Z"
+                android:fillColor="#e0e0e0"/>
+        </group>
+    </group>
+</vector>

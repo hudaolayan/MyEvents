@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorAccent">@color/white</item>
+
+        <item name="editTextStyle">@style/AppTheme.AppEditTextStyle</item>
+        <item name="android:datePickerStyle">@style/AppTheme.spinnerDatePicker</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.AppEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="hintTextColor">@color/editTextHintColor</item>
+        <item name="android:textSize">@dimen/field_text_size</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+    </style>
+
+    <style name="AppTheme.spinnerDatePicker" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:datePickerMode">spinner</item>
+
+        <item name="android:padding">@dimen/_14sdp</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="editTextStyle">@style/AppTheme.AppEditTextStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+</resources>

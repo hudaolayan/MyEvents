@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021
+  ~ project: MyEvents
+  ~ by: hudashafoot
+  -->
+
+<resources>
+    <dimen name="fields_margin_top">@dimen/_14sdp</dimen>
+    <dimen name="guid_line_margin">@dimen/_16sdp</dimen>
+    <dimen name="button_margin_bottom">36dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="field_stroke_width">0.8dp</dimen>
+
+    <dimen name="field_text_size">@dimen/_10ssp</dimen>
+    <dimen name="button_text_size">@dimen/_10ssp</dimen>
+    <dimen name="progress_bar_dimens">30dp</dimen>
+</resources>

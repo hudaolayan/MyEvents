@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="shafoot.h.myevents.ui.event.EventViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_9sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:src="@drawable/ic_bottom_sheet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:text="@{viewModel.isNewEvent==true ?  @string/add_event : @string/edit_event}"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:background="#F6F6F6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/nameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:lines="1"
+            android:text="@={viewModel.event.name}"
+            android:textSize="@dimen/field_text_size"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/descriptionTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:gravity="top"
+            android:hint="@string/description"
+            android:inputType="textMultiLine"
+            android:maxLines="6"
+            android:minLines="4"
+            android:text="@={viewModel.event.description}"
+            android:textSize="@dimen/field_text_size"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/nameTxt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="normal"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintEnd_toStartOf="@id/saveBtn"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTxt"
+            app:strokeColor="@color/grayUnActiveColor"
+            app:strokeWidth="@dimen/field_stroke_width" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:layout_weight="1"
+            android:onClick="@{()->viewModel.saveEvent()}"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="normal"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/cancelBtn"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTxt" />
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/progress_bar"
+            android:layout_width="@dimen/progress_bar_dimens"
+            android:layout_height="@dimen/progress_bar_dimens"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.946" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

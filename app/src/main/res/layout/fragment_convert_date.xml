@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="hijriDate"
+            type="shafoot.h.myevents.models.Date" />
+
+        <variable
+            name="hijriMonth"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.converter.ConvertDateFragment">
+
+        <include
+            android:id="@+id/toolbarView"
+            layout="@layout/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{@string/gregorian_to_hijri_converter}" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:text="@string/select_date_to_convert"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/toolbarView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/dateTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:drawableEnd="@drawable/ic_select_date"
+            android:focusable="false"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/subTitleTxt"
+            app:layout_constraintStart_toStartOf="@id/subTitleTxt"
+            app:layout_constraintTop_toBottomOf="@id/subTitleTxt"
+            tools:text="Monday 05,July,2021" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/green_card"
+            app:layout_constraintBottom_toBottomOf="@id/hijriMonthTxt"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/dateTxt" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hijriDateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:text="@string/hijri_date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/dateTxt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hijriDateTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:text="@{hijriDate.date}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/hijriDateTv"
+            tools:text="25-11-1442" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hijriMonthTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin_top"
+            android:lines="2"
+            android:text="@{hijriMonth}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/hijriDateTxt"
+            tools:text="Dhū al-Qaʿdah" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addEventBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/add_event"
+            android:textAllCaps="false"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="normal"
+            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
+            app:cornerRadius="@dimen/card_corner_radius"
+            app:layout_constraintEnd_toEndOf="@id/dateTxt"
+            app:layout_constraintStart_toStartOf="@id/dateTxt"
+            app:layout_constraintTop_toBottomOf="@id/hijriMonthTxt" />
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/progress_bar"
+            android:layout_width="@dimen/progress_bar_dimens"
+            android:layout_height="@dimen/progress_bar_dimens"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/errorView"
+            layout="@layout/error_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/dateTxt" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

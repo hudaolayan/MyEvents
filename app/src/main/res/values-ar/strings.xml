@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">MyEvents</string>
+    <string name="arabic">العربية</string>
+    <string name="english">الانجليزية</string>
+    <string name="change_language">تغيير اللغة</string>
+
+    <string name="convert">تحويل التاريخ</string>
+    <string name="events">الاحداث</string>
+    <string name="settings">الاعدادات</string>
+
+    <string name="gregorian_to_hijri_converter">التحويل من الميلادي إلى الهجري</string>
+    <string name="select_date_to_convert">اختر التاريخ للتحويل</string>
+    <string name="hijri_date">التاريخ الهجري</string>
+    <string name="add_event">أضف حدث</string>
+    <string name="add">حفظ</string>
+    <string name="cancel">الغاء</string>
+    <string name="name">اسم الحدث</string>
+    <string name="description">الوصف</string>
+    <string name="edit_event">تعديل الحدث</string>
+    <string name="save">حفظ</string>
+    <string name="save_success">تم حفظ الحدث بنجاح</string>
+    <string name="edit">تعديل</string>
+    <string name="delete">حذف</string>
+    <string name="delete_multiple_event_title">حذف %d حدث</string>
+    <string name="delete_multiple_event_description">هل أنت متأكد أنك تريد حذف الأحداث المحددة؟</string>
+    <string name="delete_event_title">حذف الحدث</string>
+    <string name="delete_event_description">هل أنت متأكد أنك تريد حذف %s ؟</string>
+    <string name="deleted_successfully">تم الحذف</string>
+    <string name="selected_count_label">%s محددة</string>
+    <string name="no_events_yet">لا توجد احداث</string>
+    <string name="error_empty_event_name">الرجاء إدخال اسم الحدث</string>
+    <string name="error_empty_event_description">الرجاء إدخال وصف الحدث</string>
+    <string name="dark_mode">الوضع المظلم</string>
+
+
+    <string name="error_no_internet_connection">لا يوجد اتصال بالإنترنت ، تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+    <string name="error_unexpected_message">حدث خطأ ما. أعد المحاولة مرة أخرى.</string>
+    <string name="error_timeout">Timeout\n please try again</string>
+    <string name="error_client">حدث خطأ ما ، يرجى المحاولة مرة أخرى</string>
+    <string name="error_server">مشاكل في الخادم الرجاء المحاولة مرة أخرى في وقت لاحق</string>
+
+    <!-- error view -->
+    <string name="btn_try_again">حاول مرة أخرى</string>
+
+</resources>

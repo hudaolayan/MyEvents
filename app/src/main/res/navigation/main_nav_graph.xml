@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_activity_main"
+    app:startDestination="@id/navigationConvert">
+
+    <fragment
+        android:id="@+id/navigationConvert"
+        android:name="shafoot.h.myevents.ui.converter.ConvertDateFragment"
+        android:label="@string/convert"
+        tools:layout="@layout/fragment_convert_date">
+
+        <action
+            android:id="@+id/addEditEventFragmentDirection"
+            app:destination="@id/addEditEventFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/addEditEventFragment"
+        android:name="shafoot.h.myevents.ui.event.add.AddEditEventFragment"
+        tools:layout="@layout/fragment_add_edit_event">
+
+        <argument
+            android:name="event"
+            app:argType="shafoot.h.myevents.models.Event" />
+
+    </dialog>
+
+    <fragment
+        android:id="@+id/navigationEvents"
+        android:name="shafoot.h.myevents.ui.event.list.EventsListFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_events_list" />
+
+    <fragment
+        android:id="@+id/navigationMore"
+        android:name="shafoot.h.myevents.ui.more.MoreFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_more" />
+
+
+</navigation>

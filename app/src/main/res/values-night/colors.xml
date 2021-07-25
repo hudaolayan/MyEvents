@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lightGreen">#D4EEDC</color>
+    <color name="green">#38a169</color>
+    <color name="darkGray">#718096</color>
+    <color name="black">#202125</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="errorColor">#EA463A</color>
+    <color name="editTextHintColor">#DDDDDD</color>
+    <color name="grayUnActiveColor">#718096</color>
+    <color name="disabledColor">@color/editTextHintColor</color>
+    <color name="editTextTextColor">@color/white</color>
+
+    <color name="toolbarBackground">@color/black</color>
+</resources>

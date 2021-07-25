@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MyEvents</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="change_language">Change Language</string>
+
+    <string name="convert">Convert Date</string>
+    <string name="events">Events</string>
+    <string name="settings">Settings</string>
+
+    <string name="gregorian_to_hijri_converter">Gregorian to Hijri Converter</string>
+    <string name="select_date_to_convert">Select date to convert</string>
+    <string name="hijri_date">Hijri date</string>
+    <string name="add_event">Add Event</string>
+    <string name="add">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Event Name</string>
+    <string name="description">Description</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="save">Save</string>
+    <string name="save_success">Event Saved Successfully</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_multiple_event_title">Delete %d Events</string>
+    <string name="delete_multiple_event_description">Are you sure you want to delete Selected chats?</string>
+    <string name="delete_event_title">Delete Event</string>
+    <string name="delete_event_description">Are you sure you want to delete the Event <b>%s</b>?</string>
+    <string name="deleted_successfully">deleted Successfully</string>
+    <string name="selected_count_label">%s Selected</string>
+    <string name="no_events_yet">No Events Yet</string>
+    <string name="error_empty_event_name">Please Enter Event Name</string>
+    <string name="error_empty_event_description">Please Enter Event Description</string>
+    <string name="dark_mode">Dark Mode</string>
+
+    <string name="error_no_internet_connection">No Internet Connection, check your internet connection and try again.</string>
+    <string name="error_unexpected_message">Something went wrong, please try again.</string>
+    <string name="error_timeout">Timeout\n please try again</string>
+    <string name="error_client">Something went wrong with your request, please try again</string>
+    <string name="error_server">Issues in server side\n please try again later</string>
+
+    <!-- error view -->
+    <string name="btn_try_again">try Again</string>
+
+</resources>

@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
 
     private fun initNavigation() {
         navController = findNavController(R.id.mainNavHostFragment)
-        binding.mainBottomNav.setupWithNavController(navController)
+             binding.mainBottomNav.setupWithNavController(navController)
 
     }
 

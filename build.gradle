@@ -15,6 +15,9 @@ buildscript {
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.35'
     }
 }
+plugins {
+    id "org.jlleitschuh.gradle.ktlint" version "10.1.0"
+}
 
 allprojects {
     repositories {
@@ -28,3 +31,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task installGitHook(type: Copy){
+    from new File(rootProject.rootDir,'scripts/pre-commit')
+    into{ new File(rootProject.rootDir, '.git/hooks')}
+    fileMode 0777
+}
+
+tasks.getByPath(':app:preBuild').dependsOn installGitHook

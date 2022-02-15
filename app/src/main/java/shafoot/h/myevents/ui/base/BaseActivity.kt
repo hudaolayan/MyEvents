@@ -14,7 +14,7 @@ import shafoot.h.myevents.common.enums.Language
 import shafoot.h.myevents.data.prefs.PreferencesConstants
 
 
-abstract class BaseActivity() : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
 
 
     override fun attachBaseContext(newBase: Context) {

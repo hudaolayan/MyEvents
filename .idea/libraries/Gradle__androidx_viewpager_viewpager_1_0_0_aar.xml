@@ -2,9 +2,10 @@
   <library name="Gradle: androidx.viewpager:viewpager:1.0.0@aar">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/52398f1632215bc8a8ad22b58cd624dc/viewpager-1.0.0/res" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/846613b847224c6b9ab93f87f5c48a45/viewpager-1.0.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/846613b847224c6b9ab93f87f5c48a45/viewpager-1.0.0/AndroidManifest.xml" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/846613b847224c6b9ab93f87f5c48a45/viewpager-1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/04673a9b68d835405e8abd4a24d30d5d/viewpager-1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/04673a9b68d835405e8abd4a24d30d5d/viewpager-1.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/04673a9b68d835405e8abd4a24d30d5d/viewpager-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

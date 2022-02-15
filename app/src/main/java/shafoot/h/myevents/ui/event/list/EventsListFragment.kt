@@ -142,23 +142,6 @@ class EventsListFragment : BaseBindingFragment<FragmentEventsListBinding>() {
         builder.show()
     }
 
-    private fun showDeleteMultipleEventDialog(events: MutableList<Event?>) {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle(getString(R.string.delete_multiple_event_title, events.size))
-        builder.setMessage(getString(R.string.delete_multiple_event_description))
-        val dialog: AlertDialog = builder.create()
-
-        builder.setPositiveButton(R.string.delete) { _, _ ->
-            viewModel.deleteEvents(events).observe(viewLifecycleOwner, deleteEventObserver)
-            dialog.dismiss()
-        }
-
-        builder.setNegativeButton(R.string.cancel) { _, _ ->
-            dialog.dismiss()
-        }
-
-        builder.show()
-    }
 
     private val deleteEventObserver = Observer<Result<Unit>> {
         when (it) {

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.core:core-ktx:1.6.0@aar">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/1f06f4251180a69a441009fae11abe9a/jetified-core-ktx-1.6.0/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/1f06f4251180a69a441009fae11abe9a/jetified-core-ktx-1.6.0/res" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/1f06f4251180a69a441009fae11abe9a/jetified-core-ktx-1.6.0/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/9725498e25625ab53167f2fd9235fa99/jetified-core-ktx-1.6.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/9725498e25625ab53167f2fd9235fa99/jetified-core-ktx-1.6.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/9725498e25625ab53167f2fd9235fa99/jetified-core-ktx-1.6.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

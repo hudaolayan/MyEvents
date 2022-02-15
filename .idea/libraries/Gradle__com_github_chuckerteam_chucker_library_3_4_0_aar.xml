@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.chuckerteam.chucker:library:3.4.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/66494d40401f97e79e6e1b737780349e/jetified-library-3.4.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/66494d40401f97e79e6e1b737780349e/jetified-library-3.4.0/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/66494d40401f97e79e6e1b737780349e/jetified-library-3.4.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/be8cfc3bf6b274beff3fcc1b6cc82f18/jetified-library-3.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/be8cfc3bf6b274beff3fcc1b6cc82f18/jetified-library-3.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/be8cfc3bf6b274beff3fcc1b6cc82f18/jetified-library-3.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.chuckerteam.chucker/library/3.4.0/8cec8992f09ad30ffcb9dc7278eb2a732e287adf/library-3.4.0-javadoc.jar!/" />

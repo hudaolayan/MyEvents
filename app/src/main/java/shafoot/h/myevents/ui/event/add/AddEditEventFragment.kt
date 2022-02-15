@@ -73,8 +73,4 @@ class AddEditEventFragment : BaseBindingBottomSheetDialogFragment<FragmentAddEdi
         })
     }
 
-    companion object {
-
-    }
-
 }

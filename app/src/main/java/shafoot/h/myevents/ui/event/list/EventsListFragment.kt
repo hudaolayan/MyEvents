@@ -74,14 +74,10 @@ class EventsListFragment : BaseBindingFragment<FragmentEventsListBinding>() {
             }
         }
 
-        require(false){
-
-        }
-
     }
 
     private fun getEvents() {
-        viewModel.getEvents().observe(viewLifecycleOwner, {
+        viewModel.getEvents().observe(viewLifecycleOwner) {
             when (it) {
                 is Result.Loading -> {
                     if (it.show) {
@@ -121,7 +117,7 @@ class EventsListFragment : BaseBindingFragment<FragmentEventsListBinding>() {
                     }
                 }
             }
-        })
+        }
     }
 
     private fun showDeleteEventDialog(event: Event) {

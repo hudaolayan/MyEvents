@@ -51,8 +51,8 @@
             android:focusable="false"
             android:inputType="text"
             android:lines="1"
-            android:textColor="@color/text_color"
             android:textAlignment="center"
+            android:textColor="@color/text_color"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintEnd_toEndOf="@id/subTitleTxt"
             app:layout_constraintStart_toStartOf="@id/subTitleTxt"
@@ -60,6 +60,7 @@
             tools:text="Monday 05,July,2021" />
 
         <View
+            android:id="@+id/greenBackground"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_20sdp"
@@ -79,7 +80,6 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"
-            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="@id/endGuidLine"
             app:layout_constraintStart_toStartOf="@id/startGuidLine"
             app:layout_constraintTop_toBottomOf="@id/dateTxt" />
@@ -95,7 +95,6 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_18ssp"
             android:textStyle="bold"
-            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="@id/endGuidLine"
             app:layout_constraintStart_toStartOf="@id/startGuidLine"
             app:layout_constraintTop_toBottomOf="@id/hijriDateTv"
@@ -112,7 +111,6 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp"
-            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="@id/endGuidLine"
             app:layout_constraintStart_toStartOf="@id/startGuidLine"
             app:layout_constraintTop_toBottomOf="@id/hijriDateTxt"
@@ -127,11 +125,17 @@
             android:textAllCaps="false"
             android:textSize="@dimen/button_text_size"
             android:textStyle="normal"
-            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
             app:cornerRadius="@dimen/card_corner_radius"
             app:layout_constraintEnd_toEndOf="@id/dateTxt"
             app:layout_constraintStart_toStartOf="@id/dateTxt"
             app:layout_constraintTop_toBottomOf="@id/hijriMonthTxt" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/hijriDataGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{hijriDate!=null ? View.VISIBLE : View.GONE}"
+            app:constraint_referenced_ids="greenBackground,hijriDateTv,hijriDateTxt,hijriMonthTxt,addEventBtn" />
 
         <include
             android:id="@+id/progressBar"

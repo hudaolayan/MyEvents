@@ -13,9 +13,6 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import okhttp3.Interceptor
-import okhttp3.Request
-import okhttp3.Response
 import shafoot.h.myevents.R
 import shafoot.h.myevents.common.enums.Language
 import shafoot.h.myevents.data.network.Result
@@ -95,7 +92,7 @@ class ConvertDateFragment : BaseBindingFragment<FragmentConvertDateBinding>() {
 
     private fun getHijriDate(gregorianDate: String?) {
         viewModel.getHijriDate(gregorianDate)
-            .observe(viewLifecycleOwner, {
+            .observe(viewLifecycleOwner) {
                 when (it) {
                     is Result.Loading -> {
                         if (it.show) {
@@ -119,6 +116,7 @@ class ConvertDateFragment : BaseBindingFragment<FragmentConvertDateBinding>() {
                     }
                     is Result.Error -> {
                         binding?.progressBar?.hide()
+                        binding?.hijriDataGroup?.hide()
                         binding?.errorView?.apply {
                             show()
                             tvErrorMessage.text =
@@ -129,7 +127,7 @@ class ConvertDateFragment : BaseBindingFragment<FragmentConvertDateBinding>() {
                         }
                     }
                 }
-            })
+            }
     }
 
 }
